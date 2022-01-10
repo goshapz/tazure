@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request
 load_dotenv()
 
-
 app = Flask(__name__)
 
 
@@ -14,7 +13,6 @@ def index():
     return render_template('index.html')
 
 
-# code
 @app.route('/', methods=['POST'])
 def index_post():
     original_text = request.form['text']
